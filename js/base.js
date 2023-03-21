@@ -25,6 +25,12 @@ export class API extends mix(YoniusAPI).with(OrderAPI) {
         delete options.kwargs.auth;
         if (auth) options.headers.Authorization = `Bearer ${this.token}`;
     }
+
+    async ping() {
+        return {
+            success: true
+        };
+    }
 }
 
 export default API;

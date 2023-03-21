@@ -17,6 +17,8 @@ export interface APIInterface extends OrderAPI {
 }
 
 export declare class API extends BaseAPI implements APIInterface {
+    ping(): Promise<object>;
+
     listOrders(origin: string): Promise<Order[]>;
     createOrder(payload: OrderDelta): Promise<Order>;
 }
