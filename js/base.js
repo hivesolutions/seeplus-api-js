@@ -24,6 +24,7 @@ export class API extends mix(YoniusAPI).with(OrderAPI) {
         const auth = options.kwargs.auth === undefined ? true : options.kwargs.auth;
         delete options.kwargs.auth;
         if (auth) options.headers.Authorization = `Bearer ${this.token}`;
+        options.params["api-version"] = "1";
     }
 
     async ping() {

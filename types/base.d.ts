@@ -21,4 +21,5 @@ export declare class API extends BaseAPI implements APIInterface {
 
     listOrders(origin: string): Promise<Order[]>;
     createOrder(payload: OrderDelta): Promise<Order>;
+    getOrder(id: string): Promise<Order>;
 }
